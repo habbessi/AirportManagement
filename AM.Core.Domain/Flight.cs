@@ -16,10 +16,10 @@ namespace AM.Core.Domain
         public DateTime EffectiveArrival { get; set; }
         public int EstimationDuration { get; set; }
         [ForeignKey("PlaneId")]
-        public Plane? MyPlane { get; set; }
+        public virtual Plane? MyPlane { get; set; }
         //ou bien//[ForeignKey("MyPlane")]
         public int? PlaneId { get; set; }
-        public IList<Passenger> Passengers { get; set; }
+        public virtual IList<Passenger> Passengers { get; set; }
         public string Comment { get; set; }
         public string Comment2 { get; set; }
         public override string ToString()

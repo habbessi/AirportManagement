@@ -27,7 +27,7 @@ namespace AM.Core.Domain
         [EmailAddress(ErrorMessage ="Email invalide")]
         public string EmailAddress { get; set; }
         //public int Id { get; set; }
-        public IList<Flight> Flights { get; set; }
+        public virtual IList<Flight> Flights { get; set; }
         public int Age { get
             { int age = DateTime.Now.Year - BirthDate.Year;
             if (BirthDate.Month > DateTime.Now.Month) age--;
